@@ -1,0 +1,42 @@
+﻿@model DatabaseFirstPractice.Models.Rentals
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rentals</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movies.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movies.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RentalId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
